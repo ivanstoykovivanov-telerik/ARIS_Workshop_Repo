@@ -1,7 +1,5 @@
 /*
-*   This template could be used as a basic template for eveyry report. 
-*   Parts of the templates could be easily adapted or removed according to the requirements of your task:
-*   Enjoy 
+*   Homework 2
 *   Ivan Ivanov
 *   19.12.2020 
 */
@@ -18,34 +16,32 @@ function main(){
    
    if(o_mainModel){
        
-       var msg = "The type of the modell "; 
-       var name = ""; 
+       var msg = "Model profile: "; 
+       var profile; 
        
-       switch (o_mainModel.TypeNum()) {
-            case Constants.MT_KNWLDG_STRCT_DGM:
-                msg += String(o_mainModel.Type()); 
-                name += String(o_mainModel.Name(-1)); 
-                break;
+        switch (o_mainModel.TypeNum()) {
             case Constants.MT_EEPC:
-                msg += " is event driven process chain";          
-                name += String(o_mainModel.Name(-1)); 
+                profile = 111;                  
                 break;
             case Constants.MT_FUNC_ALLOC_DGM:
-                msg += " is function allocation diagram";          
-                name += String(o_mainModel.Name(-1)); 
+                profile = 222;                  
                 break;
+            case Constants.MT_KNWLDG_STRCT_DGM:                
+                profile = 333;  
+                break;
+            case Constants.MT_VAL_ADD_CHN_DGM:                
+                profile = 333;  
+                break;            
             default:
-                msg += " is not supported";          
-                name += "unknown"
+                profile = 0;                  
                 break;
         }        
         
-        Dialogs.MsgBox(msg);        
+        Dialogs.MsgBox(msg + profile);        
    }else{
         Dialogs.MsgBox("The type of the model could not be determined.");        
    }               
 }
-
 
 
 main();

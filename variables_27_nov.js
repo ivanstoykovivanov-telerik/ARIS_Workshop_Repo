@@ -113,3 +113,14 @@ console.log(varibleWithoutInitialization);
 //** typeof 
 var car = "Volvo";
 console.log(typeof car);
+
+
+
+switch (key) {
+    case value:
+        
+        break;
+
+    default:
+        break;
+}
