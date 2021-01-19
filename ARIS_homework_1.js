@@ -1,5 +1,6 @@
 /*
 *   Homework 2
+*   This report determinse the profile of the model based on the model type. 
 *   Ivan Ivanov
 *   19.12.2020 
 */

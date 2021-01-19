@@ -164,6 +164,7 @@ console.log(typeof NaN);
 */
 
 // Number()
+/*
 var ab = "10";
 var cd = 20; 
 console.log(ab + cd); 
@@ -187,7 +188,7 @@ console.log(Boolean({}));
     switch  statement 
 */
 
-
+/*
 var itRains = true; 
 
 if(itRains){
@@ -239,10 +240,18 @@ if(minAge == yourAge){
 }else{
     console.log("You cannot enter the club");
 }
+*/
+
+
+
+///************************************ */
+// SWITCH STATEMENT
+///************************************ */
+
 
 
 // switch statement
-var day = "Wednesday"; 
+var day = "Friday"; 
 switch(day){
     case "Monday" : 
         console.log("Ideas worth spreading");
@@ -255,6 +264,9 @@ switch(day){
         break;
     case "Thursday" : 
         console.log("Bitmarck daily");
+        break;
+    case "Friday" : 
+        console.log("ARIS Workshop !!");
         break;
     default: 
         console.log("Another day of work");
