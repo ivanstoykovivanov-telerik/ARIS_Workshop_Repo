@@ -4,10 +4,36 @@
 
 // undefined 
 
-var nameP ; 
+//var nameP = "false";    
 
-//console.log(Boolean( nameP = "Filip"));  
+//var arr = []; 
 /*
+if([]){    
+    console.log("It is defined.");
+}
+*/
+//var b = Boolean("dfjdfdsafjkasd"); 
+
+
+// truthy  : String ( different from " "), number , true,  {}, [] 
+// falsy   String ( different from " "), null,  undefined, false ,  
+
+
+//ar example = ""; 
+
+//if(example){
+/*
+if(example){
+    console.log("Truthy");
+}
+*/
+
+
+
+/*
+
+console.log(Boolean( nameP = "Filip"));  
+
 console.log(Boolean(nameP));
 
 
@@ -65,33 +91,41 @@ switch(day){
 
 // 
 
-
-
+function getName(){
+    return "Kozlio";
+}
+/*
 var person = {
-    firstName: "Ivan",
-    lastName : "Ivanov",
-    id       : 5566,
-    
+    firstName: getName(),
+    lastName : (this.firstName).replace("o", "uuuuu"),
+    id       : 132,    
     getFullName : function() {
       return this.firstName + " " + this.lastName;
     }, 
     getID : function() {
         return this.id ;
-      },
+    },
+    
     
   };
+*/
+
+var person = {}; 
+person.firstName = getName(); 
+person.lastName = person.firstName.replace("o", "uuuuu");
+console.log(person);
 
 
 //Object property 
-console.log(person.firstName);
+//console.log(person.firstName);
 
 // Object method
-console.log(person.getFullName()); 
+//console.log(person.getFullName()); 
 
 // Object method
-console.log(person.getID()); 
+//console.log(person.getID()); 
 
-console.log(typeof person);
+// onsole.log(typeof person);
 
 
 // what is this  ???

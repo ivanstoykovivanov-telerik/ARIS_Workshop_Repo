@@ -13,9 +13,9 @@ function main(){
     o_model = g_oGroup.CreateModel(Constants.MT_EEPC, "Delivery chain", g_nLoc);       
     
     // Array to store the object ocss. created in the model
-    var ao_objOccs =[]; 
-       
-    for(i=0; i < 3; i++){        
+    var ao_objOccs =[];          
+
+    for(i=0; i < 10; i++){        
         
         // crete obj definitions for the objects (they are created in the group)    
         var o_funcObjDef = g_oGroup.CreateObjDef( Constants.OT_FUNC, "Function " + i , g_nLoc );
@@ -35,13 +35,20 @@ function main(){
             Dialogs.MsgBox("Object definition could not be created.");         
         }                     
     }
-    
+        
     if(ao_objOccs.length > 0 ){
         Dialogs.MsgBox('The following items were created in the model "' + o_model.Name(g_nLoc) + '": ' + showList(ao_objOccs, g_nLoc));         
     }else{
          // error:
         Dialogs.MsgBox("No items were created in the model " + o_model.Name(g_nLoc) + "." );         
-    }    
+    }
+    
+    // delete ObjOcc: 
+    var s_objName = "Function 1"
+    var b_OK = deleteObjecOcc(o_model, s_objName); 
+    if(b_OK){
+        Dialogs.MsgBox('Object with the name "' + s_objName +  '"was deleted.' );             
+    }        
 }
 
 
@@ -54,6 +61,27 @@ function showList(a_oItems, g_nLoc){
         s_List = s_List + "\n" + a_oItems[i].Name(g_nLoc); 
     }    
     return  s_List; 
+}
+
+
+/**
+* Deltes an obj occ by name
+*@param o_model -> obj Model 
+*@param s_name -> String name of the obj occ to be deleted
+*@returns boolean (true if successfully deleted , false if not)
+*/
+function deleteObjecOcc(o_model, s_name){    
+    var ao_objOccs = o_model.ObjOccListBySymbol([Constants.ST_FUNC]);  
+    for(i=0; i < ao_objOccs.length; i++){
+        if(ao_objOccs[i].getObjDefName(g_nLoc) == s_name ){
+            var b_OK = ao_objOccs[i].Remove();             
+            //var b_OK = o_model.deletOcc(ao_objOccs[i]); 
+            if(b_OK){
+                return true; 
+            }
+        }        
+    }         
+    return false; 
 }
 
 
