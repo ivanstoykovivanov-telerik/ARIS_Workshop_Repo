@@ -11,8 +11,12 @@ var g_oGroup= ArisData.getSelectedGroups()[0];
 function main(){                                                   
     //**
     var o_model = createModel(Constants.MT_EEPC, "Delivery chain"); 
-    var o_modelBPMN = createModel(Constants.MT_BPMN_COLLABORATION_DIAGRAM, "BPMN"); 
-    var o_modelDiagram = createModel(Constants.MT_IS_ACTIVATION_MODEL, "Diagram"); 
+    var o_modelDiagram1 = createModel(Constants.MT_IS_ACTIVATION_MODEL, "Service Diagram 1"); 
+    var o_modelDiagram2 = createModel(Constants.MT_IS_ACTIVATION_MODEL, "Service Diagram 2"); 
+    var o_modelBPMN = createModel(Constants.MT_BPMN_COLLABORATION_DIAGRAM, "BPMN 1"); 
+    var o_modelBPMN2 = createModel(Constants.MT_BPMN_COLLABORATION_DIAGRAM, "BPMN 2"); 
+    var o_modelBPMN3 = createModel(Constants.MT_BPMN_COLLABORATION_DIAGRAM, "BPMN 3");         
+    
     
     //**                          
     var ao_objOccsFuncs = createObjOccs(o_model, 10, Constants.OT_FUNC,  Constants.ST_FUNC, "Function", 20, 400 ); 
