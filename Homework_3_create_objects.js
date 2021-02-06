@@ -73,9 +73,8 @@ function showList(a_oItems, g_nLoc){
 function deleteObjecOcc(o_model, s_name){    
     var ao_objOccs = o_model.ObjOccListBySymbol([Constants.ST_FUNC]);  
     for(i=0; i < ao_objOccs.length; i++){
-        if(ao_objOccs[i].getObjDefName(g_nLoc) == s_name ){
-            var b_OK = ao_objOccs[i].Remove();             
-            //var b_OK = o_model.deletOcc(ao_objOccs[i]); 
+        if(ao_objOccs[i].Name(g_nLoc) == s_name ){
+            var b_OK = ao_objOccs[i].Remove();                        
             if(b_OK){
                 return true; 
             }
