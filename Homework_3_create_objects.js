@@ -44,7 +44,7 @@ function main(){
     }
     
     // delete ObjOcc: 
-    var s_objName = "Function 1"
+    var s_objName = "Function 7"
     var b_OK = deleteObjecOcc(o_model, s_objName); 
     if(b_OK){
         Dialogs.MsgBox('Object with the name "' + s_objName +  '"was deleted.' );             
@@ -73,7 +73,7 @@ function showList(a_oItems, g_nLoc){
 function deleteObjecOcc(o_model, s_name){    
     var ao_objOccs = o_model.ObjOccListBySymbol([Constants.ST_FUNC]);  
     for(i=0; i < ao_objOccs.length; i++){
-        if(ao_objOccs[i].Name(g_nLoc) == s_name ){
+        if(ao_objOccs[i].getObjDefName(g_nLoc) == s_name ){
             var b_OK = ao_objOccs[i].Remove();                        
             if(b_OK){
                 return true; 
