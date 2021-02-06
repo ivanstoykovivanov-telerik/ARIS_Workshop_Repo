@@ -53,19 +53,19 @@ function main(){
 
 
 /**
-* showList(a_oItems, g_nLoc) shows a list of the items contained in the arry 
+*  shows a list of the items contained in the arry 
 */
-function showList(a_oItems, g_nLoc){    
+function showList(ao_items, g_nLoc){    
     var s_List = "";     
-    for (var i=0; i< a_oItems.length; i++){
-        s_List = s_List + "\n" + a_oItems[i].Name(g_nLoc); 
+    for (var i=0; i< ao_items.length; i++){
+        s_List = s_List + "\n" + ao_items[i].Name(g_nLoc); 
     }    
     return  s_List; 
 }
 
 
 /**
-* Deltes an obj occ by name
+* Deletes an obj occ by name
 *@param o_model -> obj Model 
 *@param s_name -> String name of the obj occ to be deleted
 *@returns boolean (true if successfully deleted , false if not)
