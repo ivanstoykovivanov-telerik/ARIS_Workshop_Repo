@@ -21,7 +21,9 @@ function writeNameAndCountry(fullName, country){
     return fullName + " " + country; 
 }
 
-// function in argument list
+
+
+// function in argument list  df 
 console.log(writeNameAndCountry(showName("Borat", "Sagdiev"), "Kazahstan"));
 
 //anonymous  function as arguments
